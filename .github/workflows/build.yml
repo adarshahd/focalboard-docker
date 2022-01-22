@@ -1,6 +1,7 @@
 name: Docker buildx CI
 
 env:
+  DOCKERHUB_REPO: ghcr.io/araven/focalboard-docker
   FOCALBOARD_MAJOR: 0
   FOCALBOARD_MINOR: 12
   FOCALBOARD_INCREMENT: 1
