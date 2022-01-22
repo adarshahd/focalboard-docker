@@ -5,7 +5,7 @@ ARG FOCALBOARD_REF
 
 RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get update
-RUN apt-get install -y git musl-dev libtool zlib zlib-dev autoconf automake bash g++ gcc libc6-compat libjpeg-turbo-dev libpng-dev
+RUN apt-get install -y git musl-dev libtool autoconf automake bash g++ gcc libpng-dev
 RUN apt-get install -y make nasm nodejs
 RUN git clone -b ${FOCALBOARD_REF} --depth 1 https://github.com/mattermost/focalboard.git /focalboard
 WORKDIR /focalboard
