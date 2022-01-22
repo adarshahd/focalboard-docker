@@ -10,6 +10,7 @@ RUN git clone -b ${FOCALBOARD_REF} --depth 1 https://github.com/mattermost/focal
 WORKDIR /focalboard
 RUN sed -i "s/GOARCH=amd64/GOARCH=${TARGETARCH}/g" Makefile
 RUN npm install -g npm
+ENV CPPFLAGS="-DPNG_ARM_NEON_OPT=0"
 RUN make prebuild
 RUN make
 RUN make server-linux-package
