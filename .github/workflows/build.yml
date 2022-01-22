@@ -48,3 +48,5 @@ jobs:
             ${{ env.DOCKERHUB_REPO }}:${{ env.FOCALBOARD_MAJOR }}.${{ env.FOCALBOARD_MINOR }}
             ${{ env.DOCKERHUB_REPO }}:${{ env.FOCALBOARD_MAJOR }}
             ${{ env.DOCKERHUB_REPO }}:latest
+          cache-from: type=registry,ref=${{ env.DOCKERHUB_REPO }}:latest
+          cache-to: type=inline
