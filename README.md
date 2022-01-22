@@ -1,4 +1,4 @@
-focalboard Docker images [![build](https://github.com/araven/focalboard-docker/actions/workflows/build.yaml/badge.svg)](https://github.com/araven/focalboard-docker/actions/workflows/build.yaml)
+focalboard Docker images [![Docker buildx CI](https://github.com/araven/focalboard-docker/actions/workflows/build.yml/badge.svg)](https://github.com/araven/focalboard-docker/actions/workflows/build.yml)
 =========================
 
 Cross platform Docker images for [focalboard](https://www.focalboard.com).
