@@ -9,7 +9,7 @@ Usage
 ### docker
 
 ```
-docker run -p 8000:8000 nicoulaj/focalboard
+docker run -p 8000:8000 ghcr.io/araven/focalboard-docker
 ```
 
 ### docker-compose
@@ -18,7 +18,7 @@ docker run -p 8000:8000 nicoulaj/focalboard
 
     ```
     {
-        ["serverRoot": "http://focalboard.home",]
+        ["serverRoot": "http://focalboard.local",]
         "port": 8000,
         "dbtype": "sqlite3",
         "dbconfig": "/var/lib/focalboard/focalboard.db",
@@ -40,7 +40,7 @@ docker run -p 8000:8000 nicoulaj/focalboard
     ```
     services:
       focalboard:
-        image: araven/focalboard
+        image: ghcr.io/araven/focalboard-docker
         volumes:
         - ./config.json:/opt/focalboard/config.json
         - /var/lib/focalboard:/var/lib/focalboard
