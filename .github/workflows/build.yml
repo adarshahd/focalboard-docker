@@ -3,9 +3,9 @@ name: Docker buildx CI
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  FOCALBOARD_MAJOR: 0
-  FOCALBOARD_MINOR: 12
-  FOCALBOARD_INCREMENT: 1
+  FOCALBOARD_MAJOR: 7
+  FOCALBOARD_MINOR: 5
+  FOCALBOARD_INCREMENT: 2
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Extract metadata (tags, labels) for Docker
         id: meta
